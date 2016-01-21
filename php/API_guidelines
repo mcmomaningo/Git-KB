@@ -1,0 +1,61 @@
+<?php
+
+/** 
+  * REST API
+  * REpresentational State Transfer
+  *
+  * -------------------------------------------------
+  * API GUIDELINES
+  * -------------------------------------------------
+  * Use GET POST PUT DELETE appropriately
+  * GET - to get object details
+  * POST - to create object
+  * PUT - to update object
+  * DELETE - to delete object
+  * 
+  * -------------------------------------------------
+  * PROPER API URL
+  * -------------------------------------------------
+  * ### id should be in the url
+  * http://domain.com/product/1234
+  * ### use ? for filters
+  * http://domain.com/product/1234?filter=price&order=asc	
+  * ### get description
+  * http://domain.com/product/1234/description/
+  * ### get photos
+  * http://domain.com/product/1234/photos/
+  *
+  * GET http://domain.com/product/1234
+  * POST http://domain.com/product/1234
+  * PUT http://domain.com/product/1234
+  * POST http://domain.com/product/1234
+  *
+  * -------------------------------------------------
+  * RESOURCES
+  * -------------------------------------------------
+  * http://symfony.com/video/26/designing-http-interfaces-and-restful-web-services/English
+  * http://code.tutsplus.com/tutorials/a-beginners-introduction-to-http-and-rest--net-16340
+  */
+  
+class user{
+	public function __construct( $id, $attr=NULL ){
+		
+		### for filters
+		if($_GET){
+		
+		}
+		
+		### for attributes
+		if($attr){
+			switch($attr){
+				case 'description':
+					$this->description();
+			}
+		}
+
+	}
+
+	public function description(){
+		### use $_SERVER['REQUEST_METHOD'] to get method
+	}
+}
